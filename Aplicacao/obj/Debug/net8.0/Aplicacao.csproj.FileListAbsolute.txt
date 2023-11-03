@@ -1,0 +1,11 @@
+D:\C#\API DDD\API_DDD_2023\Aplicacao\bin\Debug\net8.0\Aplicacao.deps.json
+D:\C#\API DDD\API_DDD_2023\Aplicacao\bin\Debug\net8.0\Aplicacao.dll
+D:\C#\API DDD\API_DDD_2023\Aplicacao\bin\Debug\net8.0\Aplicacao.pdb
+D:\C#\API DDD\API_DDD_2023\Aplicacao\obj\Debug\net8.0\Aplicacao.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\API DDD\API_DDD_2023\Aplicacao\obj\Debug\net8.0\Aplicacao.AssemblyInfoInputs.cache
+D:\C#\API DDD\API_DDD_2023\Aplicacao\obj\Debug\net8.0\Aplicacao.AssemblyInfo.cs
+D:\C#\API DDD\API_DDD_2023\Aplicacao\obj\Debug\net8.0\Aplicacao.csproj.CoreCompileInputs.cache
+D:\C#\API DDD\API_DDD_2023\Aplicacao\obj\Debug\net8.0\Aplicacao.dll
+D:\C#\API DDD\API_DDD_2023\Aplicacao\obj\Debug\net8.0\refint\Aplicacao.dll
+D:\C#\API DDD\API_DDD_2023\Aplicacao\obj\Debug\net8.0\Aplicacao.pdb
+D:\C#\API DDD\API_DDD_2023\Aplicacao\obj\Debug\net8.0\ref\Aplicacao.dll
