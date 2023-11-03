@@ -1,0 +1,15 @@
+D:\C#\API DDD\API_DDD_2023\Dominio\bin\Debug\net8.0\Dominio.deps.json
+D:\C#\API DDD\API_DDD_2023\Dominio\bin\Debug\net8.0\Dominio.dll
+D:\C#\API DDD\API_DDD_2023\Dominio\bin\Debug\net8.0\Dominio.pdb
+D:\C#\API DDD\API_DDD_2023\Dominio\bin\Debug\net8.0\Entidades.dll
+D:\C#\API DDD\API_DDD_2023\Dominio\bin\Debug\net8.0\Entidades.pdb
+D:\C#\API DDD\API_DDD_2023\Dominio\obj\Debug\net8.0\Dominio.csproj.AssemblyReference.cache
+D:\C#\API DDD\API_DDD_2023\Dominio\obj\Debug\net8.0\Dominio.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\API DDD\API_DDD_2023\Dominio\obj\Debug\net8.0\Dominio.AssemblyInfoInputs.cache
+D:\C#\API DDD\API_DDD_2023\Dominio\obj\Debug\net8.0\Dominio.AssemblyInfo.cs
+D:\C#\API DDD\API_DDD_2023\Dominio\obj\Debug\net8.0\Dominio.csproj.CoreCompileInputs.cache
+D:\C#\API DDD\API_DDD_2023\Dominio\obj\Debug\net8.0\Dominio.csproj.CopyComplete
+D:\C#\API DDD\API_DDD_2023\Dominio\obj\Debug\net8.0\Dominio.dll
+D:\C#\API DDD\API_DDD_2023\Dominio\obj\Debug\net8.0\refint\Dominio.dll
+D:\C#\API DDD\API_DDD_2023\Dominio\obj\Debug\net8.0\Dominio.pdb
+D:\C#\API DDD\API_DDD_2023\Dominio\obj\Debug\net8.0\ref\Dominio.dll
