@@ -11,9 +11,7 @@ namespace Aplicacao.Interfaces
     public interface IAplicacaoNoticia : IGenericaAplicacao<Noticia>
     {
         Task AdicionaNoticia(Noticia noticia);
-
         Task AtualizaNoticia(Noticia noticia);
-
         Task<List<Noticia>> ListarNoticiasAtivas();
     }
 }

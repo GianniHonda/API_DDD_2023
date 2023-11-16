@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Aplicacao.Interfaces.Genericos
 {
-    public interface IGenericaAplicacao<T> where T : class
+    public interface IGenericaAplicacao <T> where T : class
     {
         Task Adicionar(T objeto);
 
@@ -14,7 +14,7 @@ namespace Aplicacao.Interfaces.Genericos
 
         Task Excluir(T objeto);
 
-        Task<T> BuscarPortId(int Id);
+        Task<T> BuscarPorId(int Id);
 
         Task<List<T>> Listar();
     }

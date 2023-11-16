@@ -1,6 +1,6 @@
 ﻿using Aplicacao.Interfaces;
 using Dominio.Interfaces;
-using Dominio.Interfaces.InterfacesServicos;
+using Dominio.Interfaces.InterfaceServicos;
 using Entidades.Entidades;
 using System;
 using System.Collections.Generic;
@@ -12,10 +12,8 @@ namespace Aplicacao.Aplicacoes
 {
     public class AplicacaoNoticia : IAplicacaoNoticia
     {
-
         INoticia _INoticia;
         IServicoNoticia _IServicoNoticia;
-        
         public AplicacaoNoticia(INoticia INoticia, IServicoNoticia IServicoNoticia)
         {
             _INoticia = INoticia;
@@ -36,7 +34,6 @@ namespace Aplicacao.Aplicacoes
             return await _IServicoNoticia.ListarNoticiasAtivas();
         }
 
-
         public async Task Adicionar(Noticia objeto)
         {
             await _INoticia.Adicionar(objeto);
@@ -47,9 +44,9 @@ namespace Aplicacao.Aplicacoes
             await _INoticia.Atualizar(objeto);
         }
 
-        public async Task<Noticia> BuscarPortId(int Id)
+        public async Task<Noticia> BuscarPorId(int Id)
         {
-            return await _INoticia.BuscarPortId(Id);
+            return await _INoticia.BuscarPorId(Id);
         }
 
         public async Task Excluir(Noticia objeto)
