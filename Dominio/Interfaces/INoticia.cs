@@ -11,6 +11,6 @@ namespace Dominio.Interfaces
 {
     public interface INoticia : IGenericos<Noticia>
     {
-        Task<List<Noticia>> ListarNotricias(Expression<Func<Noticia, bool>> exNoticia);
+        Task<List<Noticia>> ListarNoticia(Expression<Func<Noticia, bool>> exNoticia);
     }
 }

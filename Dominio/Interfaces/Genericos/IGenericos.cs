@@ -8,13 +8,13 @@ namespace Dominio.Interfaces.Genericos
 {
     public interface IGenericos<T> where T : class
     {
-        Task Adicionar(T objeto);
+        Task Adicionar (T objeto);
 
-        Task Atualizar(T objeto);
+        Task Atualizar (T objeto);
 
-        Task Excluir(T objeto);
+        Task Excluir (T objeto);
 
-        Task<T> BuscarPortId(int Id);
+        Task<T> BuscarPorId(int Id);
 
         Task<List<T>> Listar();
     }

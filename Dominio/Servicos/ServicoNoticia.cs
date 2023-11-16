@@ -1,5 +1,5 @@
 ﻿using Dominio.Interfaces;
-using Dominio.Interfaces.InterfacesServicos;
+using Dominio.Interfaces.InterfaceServicos;
 using Entidades.Entidades;
 using System;
 using System.Collections.Generic;
@@ -11,13 +11,13 @@ namespace Dominio.Servicos
 {
     public class ServicoNoticia : IServicoNoticia
     {
-
         private readonly INoticia _INoticia;
 
         public ServicoNoticia(INoticia INoticia)
         {
             _INoticia = INoticia;
         }
+
         public async Task AdicionaNoticia(Noticia noticia)
         {
             var validarTitulo = noticia.ValidarPropriedadeString(noticia.Titulo, "Titulo");
@@ -29,7 +29,6 @@ namespace Dominio.Servicos
                 noticia.DataCadastro = DateTime.Now;
                 noticia.Ativo = true;
                 await _INoticia.Adicionar(noticia);
-
             }
         }
 
@@ -44,13 +43,12 @@ namespace Dominio.Servicos
                 noticia.DataCadastro = DateTime.Now;
                 noticia.Ativo = true;
                 await _INoticia.Atualizar(noticia);
-
             }
         }
 
         public async Task<List<Noticia>> ListarNoticiasAtivas()
         {
-            return await _INoticia.ListarNotricias(n => n.Ativo);
+            return await _INoticia.ListarNoticia(n => n.Ativo);
         }
     }
 }
