@@ -10,8 +10,8 @@ namespace Entidades.Notificacoes
     public class Notifica
     {
 
-        public Notifica() 
-        { 
+        public Notifica()
+        {
             Notificacoes = new List<Notifica>();
         }
 
@@ -24,19 +24,17 @@ namespace Entidades.Notificacoes
         [NotMapped]
         public List<Notifica> Notificacoes;
 
-
         public bool ValidarPropriedadeString(string valor, string nomePropriedade)
         {
             if(string.IsNullOrWhiteSpace(valor) || string.IsNullOrWhiteSpace(nomePropriedade))
             {
                 Notificacoes.Add(new Notifica
                 {
-                    Mensagem="Campo Obrigatório",
-                    NomePropriedade=nomePropriedade
+                    Mensagem = "Campo Obrigatório",
+                    NomePropriedade = nomePropriedade
                 });
                 return false;
             }
-
             return true;
         }
     }
