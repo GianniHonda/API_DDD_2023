@@ -14,25 +14,19 @@ namespace Infraestrutura.Repositorio
 {
     public class RepositorioNoticia : RepositorioGenerico<Noticia>, INoticia
     {
-
         private readonly DbContextOptions<Contexto> _optionsbuilder;
 
-        public RepositorioNoticia()
-        {
+       public RepositorioNoticia() 
+       {
             _optionsbuilder = new DbContextOptions<Contexto>();
-        }
-
-        public async Task<List<Noticia>> ListarNoticias(Expression<Func<Noticia, bool>> exNoticia)
-        {
+       }
+        
+       public async Task<List<Noticia>> ListarNoticia(Expression<Func<Noticia, bool>> exNoticia)
+       {
             using (var banco = new Contexto(_optionsbuilder))
             {
                 return await banco.Noticia.Where(exNoticia).AsNoTracking().ToListAsync();
             }
-        }
-
-        public Task<List<Noticia>> ListarNotricias(Expression<Func<Noticia, bool>> exNoticia)
-        {
-            throw new NotImplementedException();
-        }
+       }
     }
 }

@@ -20,21 +20,20 @@ namespace Infraestrutura.Repositorio.Genericos
         {
             _OptionsBuilder = new DbContextOptions<Contexto>();
         }
-
-        public async Task Adicionar(T Objeto)
+        public async Task Adicionar(T objeto)
         {
             using (var data = new Contexto(_OptionsBuilder))
             {
-                await data.Set<T>().AddAsync(Objeto);
+                await data.Set<T>().AddAsync(objeto);
                 await data.SaveChangesAsync();
             }
         }
 
-        public async Task Atualizar(T Objeto)
+        public async Task Atualizar(T objeto)
         {
             using (var data = new Contexto(_OptionsBuilder))
             {
-                data.Set<T>().Update(Objeto);
+                data.Set<T>().Update(objeto);
                 await data.SaveChangesAsync();
             }
         }
@@ -47,11 +46,11 @@ namespace Infraestrutura.Repositorio.Genericos
             }
         }
 
-        public async Task Excluir(T Objeto)
+        public async Task Excluir(T objeto)
         {
             using (var data = new Contexto(_OptionsBuilder))
             {
-                data.Set<T>().Remove(Objeto);
+                data.Set<T>().Remove(objeto);
                 await data.SaveChangesAsync();
             }
         }
@@ -63,7 +62,6 @@ namespace Infraestrutura.Repositorio.Genericos
                 return await data.Set<T>().AsNoTracking().ToListAsync();
             }
         }
-
 
         #region Disposed https://docs.microsoft.com/pt-br/dotnet/standard/garbage-collection/implementing-dispose
         // Flag: Has Dispose already been called?
@@ -94,12 +92,6 @@ namespace Infraestrutura.Repositorio.Genericos
 
             disposed = true;
         }
-
-        public Task<T> BuscarPortId(int Id)
-        {
-            throw new NotImplementedException();
-        }
         #endregion
-
     }
 }

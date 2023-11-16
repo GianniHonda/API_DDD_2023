@@ -1,5 +1,6 @@
 ﻿using Dominio.Interfaces;
 using Entidades.Entidades;
+using Entidades.Enums;
 using Infraestrutura.Configuracoes;
 using Infraestrutura.Repositorio.Genericos;
 using Microsoft.EntityFrameworkCore;
@@ -20,21 +21,21 @@ namespace Infraestrutura.Repositorio
             _optionsbuilder = new DbContextOptions<Contexto>();
         }
 
-        public async Task<bool> AdicionarUsuario(string email, string senha, int idade, string celular)
+        public async Task<bool> AdicionarUusario(string email, string senha, int idade, string celular)
         {
             try
             {
                 using (var data = new Contexto(_optionsbuilder))
                 {
-                    await data.ApplicationUser.AddAsync(
+                   await data.ApplicationUser.AddAsync(
                         new ApplicationUser
                         {
                             Email = email,
                             PasswordHash = senha,
                             Idade = idade,
-                            Celular = celular
+                            Celular = celular,
+                            Tipo = TipoUsuario.Comum
                         });
-
                     await data.SaveChangesAsync();
                 }
             }
@@ -42,9 +43,28 @@ namespace Infraestrutura.Repositorio
             {
                 return false;
             }
-
-            return true;
             
+            return true;
+        }
+
+        public async Task<bool> ExisteUsuario(string email, string senha)
+        {
+            try
+            {
+                using (var data = new Contexto(_optionsbuilder))
+                {
+                    return await data.ApplicationUser.
+                        Where(u => u.Email.Equals(email) && u.PasswordHash.Equals(senha))
+                        .AsNoTracking()
+                        .AnyAsync();
+
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
         }
     }
-}
+    }
