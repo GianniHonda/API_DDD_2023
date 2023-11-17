@@ -51,6 +51,7 @@ namespace WebAPI
                 options.SupportedUICultures = supportedCultures;
             });
 
+            services.AddCors();
             services.AddDbContext<Contexto>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
@@ -109,6 +110,11 @@ namespace WebAPI
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            var urlCliente1 = "http://dominiodocliente.com.br";
+            var urlCliente2 = "http://dominiodocliente.com.br";
+
+            app.UseCors(b =>b.WithOrigins(urlCliente1, urlCliente2));
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
